@@ -19,3 +19,14 @@
 12) On the terminal, navigate to `simple-todoapp-django` and run `python manage.py migrate`
 13) Run the server by clicking the play button for the run configuration you set up
 14) Navigate to 127.0.0.1:8000! Your app should load.
+
+# Lab instructions
+1) Once you've set up the app, demonstrate that the application is running to your TA by navigating to http://127.0.0.1:8000
+2) Completed
+3) The output you get from adding a task is: 
+[23/Sep/2024 17:32:47] "POST /add/ HTTP/1.1" 302 0 
+[23/Sep/2024 17:32:47] "GET / HTTP/1.1" 200 837
+which is a POST redirect to the /add/ endpoint then a GET to refresh the page.
+4) Completed
+5) Maybe completed
+

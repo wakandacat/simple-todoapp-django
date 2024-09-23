@@ -16,6 +16,7 @@ def add_task(request):
     if request.method == 'POST':
         form = TaskForm(request.POST)
         if form.is_valid():
+            print("task added")
             form.save()
 
     return redirect('index')
@@ -24,4 +25,12 @@ def add_task(request):
 def delete_task(request, task_id):
     task = Task.objects.get(pk=task_id)
     task.delete()
+    return redirect('index')
+
+def complete_task(request, task_id):
+    task = Task.objects.get(pk=task_id)
+    if task.completed:
+        task.completed = False
+    else:
+        task.completed = True
     return redirect('index')

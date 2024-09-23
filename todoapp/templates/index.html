@@ -12,13 +12,14 @@
     {% for task in tasks %}
         <li>
             {% if task.completed %}
-            ☑
+            ☑ 👍
             {% endif %}
             {% if not task.completed %}
-            ☐
+            ☐ 👎
             {% endif %}
             {{ task.description }}
             - <a href="{% url 'delete_task' task.id %}">Delete</a>
+            - <a href="{% url 'complete_task' task.id %}">Complete</a>
         </li>
     {% endfor %}
     </ul>
